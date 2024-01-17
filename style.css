@@ -1,0 +1,181 @@
+:root {
+    --sectionHeight: 550px;
+}
+
+* {
+    margin: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+main {
+    margin-right: -20px;
+}
+
+/* Header & Footer */
+.header,
+.footer {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
+  background: #000000;
+  align-items: center;
+}
+
+.header {
+    /* removed to allow section one to start after header */
+    /* position:fixed; */
+}
+
+.footer {
+    /* The footer text is centered horizontally and vertically. */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #ececec;
+}
+
+/* Text Decorations */
+a {
+    text-decoration: none;
+    color: #ececec;
+    font-size: 18px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 50px
+}
+
+h1 {
+    padding-bottom: 50px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.sectionFive p {
+    padding-bottom: 20px;
+}
+
+/* Icons */
+.icon-circle {
+    background: black;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease-in-out;
+    /*  */
+    position: relative;
+    left: 75px;
+    margin: 20px;
+}
+
+.icon {
+    position: relative;
+    top: 20px;
+    /* left: 18px; */
+    scale: 190%;
+}
+
+.icon-circle:hover {
+    transform: scale(1.2);
+}
+
+.card {
+    max-width: 250px;
+}
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    font-size: 18px;
+    flex-wrap: wrap;
+}
+
+.subtext {
+    color: #a8abaf;
+    font-size: 18px;
+}
+
+/* Page Sections */
+.sectionOne {
+    background-image: url("images/signature.jpg");
+    display: flex;
+}
+
+.sectionTwo {
+    background-image: url("images/calculator.png");
+    display: flex;
+}
+
+.sectionThree {
+    background-image: url("images/clipboard.jpeg");
+    display: flex;
+}
+
+.sectionFour {
+    background-image: url("images/interior.jpeg");
+    display: flex;
+}
+
+.sectionFive {
+    background: #F9FAF8;
+    color: #1F2937;
+    text-align: center;
+    align-items: center;
+    padding: 100px 50px;
+}
+
+/* Parralax Effect */
+.parallax {
+    /* Setting specific height for image/section*/
+    min-height: var(--sectionHeight);
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Background-attachment doesn't always behave on phones. If not on a desktop/laptop, turn off parallax scrolling. Modify the width if needed */
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+}
+
+.sectionText{
+    min-height: var(--sectionHeight);
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    color: rgb(243, 243, 243);
+    text-align: center;
+    margin: 50px 100px;
+    width: 40%;
+    line-height: 27px;
+    /* text-shadow: 1px 1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, -1px -1px 0 #000000, 1px 1px 0 #000000, 0px 1px 0 #000000, -1px 0px 0 #000000, 0px -1px 0 #000000, 0px 0px 20px rgba(206,89,55,0); */
+}
+
+.rightText {
+    justify-content: right;
+}
+
+.leftText {
+    justify-content: left;
+}
